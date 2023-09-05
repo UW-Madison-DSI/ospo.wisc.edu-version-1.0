@@ -1,0 +1,20 @@
+<div id="uw-top-menus" class="uw-is-visible uw-horizontal" aria-hidden="false">
+	<div class="uw-main-nav">
+	<nav class="uw-nav-menu uw-nav-menu-reverse" aria-label="Main Menu">
+
+		<ul id="uw-main-nav">
+			{% for item in site.data.navigation %}
+			{% if page.url == item.link %}
+			<li class="current-menu-item">
+				<a href="{{ item.link }}">{{ item.name }}</a>
+			</li>
+			{% else %}
+			<li class="menu-item">
+				<a href="{{ item.link }}">{{ item.name }}</a>
+			</li>
+			{% endif %}
+			{% endfor %}
+		</ul>
+	</nav>
+	</div>
+</div>
