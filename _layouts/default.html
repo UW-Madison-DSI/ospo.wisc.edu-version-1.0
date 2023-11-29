@@ -13,13 +13,13 @@
 		<link rel="stylesheet" href="{{site.baseurl}}/assets/css/uw-style.css">
 		<link rel="stylesheet" href="{{site.baseurl}}/assets/css/styles.css">
 	</head>
-	<body>
+	<body class="m-0">
 		<a class="uw-show-on-focus" href="#main" id="uw-skip-link">Skip to main content</a>
 		<div class="uw-global-bar" role="navigation">
 		  <a style="text-decoration: none;" class="uw-global-name-link" href="http://www.wisc.edu" aria-label="University home page">U<span>niversity <span class="uw-of">of</span> </span>W<span>isconsin</span>–Madison</a>
 		</div>
 		<header id="branding" class="uw-header uw-has-search">
-		  <div class="uw-header-container">
+		  <div class="uw-header-container" style="max-width:75em;"> <!-- change outline to be max-width:85rem to be wider -->
 		    <div class="uw-header-crest-title">
 		      <div class="uw-header-crest">
 		        <a href="http://www.wisc.edu"><img class="uw-crest-svg" src="images/uw-crest.svg" alt="Link to University of Wisconsin-Madison home page"></a>
@@ -34,19 +34,18 @@
 			<!-- Search Bar -->
 
 			<form>
-				<div class="d-flex flex-row"
-					<div class="uw-header-search">
-						<form role="search" method="get" action="" class="uw-search-form form-inline collapse">
-							<label for="s" class="uw-show-for-sr-only">Search this site</label>
-							<input type="text" class="form-control-sm uw-search-input" placeholder="Search" name="s" id="s" value="">
-							<button class="unstyle uw-search-submit" type="submit">
-								<svg aria-hidden="true" role="presentation">
-								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#uw-symbol-search"></use>
-								</svg>
-								<span class="uw-show-for-sr-only">Submit search</span>
-							</button>
-						</form>
-					</div>
+				<div class="d-flex flex-row">
+					<form role="search" method="get" action="" class="uw-search-form form-inline collapse">
+						<label for="s" class="uw-show-for-sr-only">Search this site</label>
+						<input type="text" class="form-control-sm uw-search-input" placeholder="Search" name="s" id="s" value="">
+						<button class="unstyle uw-search-submit" type="submit">
+							<svg aria-hidden="true" role="presentation">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#uw-symbol-search"></use>
+							</svg>
+							<span class="uw-show-for-sr-only">Submit search</span>
+						</button>
+					</form>
+				</div>
 			</form>
 			<!--
 		    <div class="uw-header-search">
@@ -70,7 +69,7 @@
 		{% include navigation.html %}
 
         <div class="uw-row-full uw-pad-tb-l">
-          <div class="uw-row">
+          <div class="uw-row" style="max-width:75em;"> <!-- was uw-row before but trying to widen out -->
             <div class="uw-col uw-body">
           	  {{ content }}
             </div>
