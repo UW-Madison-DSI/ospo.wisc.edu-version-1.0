@@ -4,29 +4,50 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<title>About Us</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+		<!-- fonts -->
+    <link rel="preload" href="https://cdn.wisc.cloud/fonts/uw-rh/0.0.1/redhat-display-latin.v14.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://cdn.wisc.cloud/fonts/uw-rh/0.0.1/redhat-text-latin.v13.woff2" as="font" type="font/woff2" crossorigin>
 
 		<!-- styles -->
 		<link rel="stylesheet" href="/assets/css/uw-style.css">
 		<link rel="stylesheet" href="/assets/css/styles.css">
 	</head>
-	<body>
+	<body class="m-0">
 		<a class="uw-show-on-focus" href="#main" id="uw-skip-link">Skip to main content</a>
 		<div class="uw-global-bar" role="navigation">
-		  <a class="uw-global-name-link" href="http://www.wisc.edu" aria-label="University home page">U<span>niversity <span class="uw-of">of</span> </span>W<span>isconsin</span>–Madison</a>
+		  <a style="text-decoration: none;" class="uw-global-name-link" href="http://www.wisc.edu" aria-label="University home page">U<span>niversity <span class="uw-of">of</span> </span>W<span>isconsin</span>–Madison</a>
 		</div>
 		<header id="branding" class="uw-header uw-has-search">
-		  <div class="uw-header-container">
+		  <div class="uw-header-container" style="max-width:80em;"> <!-- change outline to be max-width:85rem to be wider -->
 		    <div class="uw-header-crest-title">
 		      <div class="uw-header-crest">
 		        <a href="http://www.wisc.edu"><img class="uw-crest-svg" src="images/uw-crest.svg" alt="Link to University of Wisconsin-Madison home page"></a>
 		      </div>
 		      <div class="uw-title-tagline">
 		        <h1 id="site-title" class="uw-site-title">
-		          <a href="" rel="home">Open Source Program Office</a>
+		          <a style="text-decoration: none;" href="" rel="home">Open Source Program Office</a>
 		        </h1>
-		        <div id="site-description" class="uw-site-tagline">Open Sourcing the <a href="https://www.wisc.edu/wisconsin-idea/">Wisconsin Idea</a></div>
+		        <div id="site-description" class="uw-site-tagline">Open Sourcing the <a style="text-decoration: none" href="https://www.wisc.edu/wisconsin-idea/">Wisconsin Idea</a></div>
 		      </div>
 		    </div>
+			<!-- Search Bar -->
+
+			<form>
+				<div class="d-flex flex-row">
+					<form role="search" method="get" action="" class="uw-search-form form-inline collapse">
+						<label for="s" class="uw-show-for-sr-only">Search this site</label>
+						<input type="text" class="form-control-sm uw-search-input" placeholder="Search" name="s" id="s" value="">
+						<button class="unstyle uw-search-submit" type="submit">
+							<svg aria-hidden="true" role="presentation">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#uw-symbol-search"></use>
+							</svg>
+							<span class="uw-show-for-sr-only">Submit search</span>
+						</button>
+					</form>
+				</div>
+			</form>
+			<!--
 		    <div class="uw-header-search">
 		      <form role="search" method="get" action="" class="uw-search-form form-inline collapse">
 		        <label for="s" class="uw-show-for-sr-only">Search this site</label>
@@ -40,98 +61,178 @@
 		      </form>
 		    </div>
 		  </div>
+			-->
+		  <!-- Search Bar -->
 		</header>
 		<button class="uw-mobile-menu-button-bar uw-mobile-menu-button-bar-reversed uw-is-closed " data-menu="uw-top-menus" aria-label="Open menu" aria-expanded="false" aria-controls="uw-top-menus">Menu<svg aria-hidden="true" focusable="false"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#uw-symbol-menu"></use></svg><svg aria-hidden="true" focusable="false"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#uw-symbol-close"></use></svg></button>
 
-		<div id="uw-top-menus" class="uw-is-visible uw-horizontal" aria-hidden="false">
-	<div class="uw-main-nav">
-	<nav class="uw-nav-menu uw-nav-menu-reverse" aria-label="Main Menu">
-
-		<ul id="uw-main-nav">
-			
-			
-			<li class="menu-item">
-				<a href="/">Home</a>
-			</li>
-			
-			
-			
-			<li class="current-menu-item">
-				<a href="/about.html">About</a>
-			</li>
-			
-			
-			
-			<li class="menu-item">
-				<a href="/activities.html">Activities</a>
-			</li>
-			
-			
-			
-			<li class="menu-item">
-				<a href="/projects.html">Projects</a>
-			</li>
-			
-			
-			
-			<li class="menu-item">
-				<a href="/news.html">News</a>
-			</li>
-			
-			
-			
-			<li class="menu-item">
-				<a href="/contact.html">Contact</a>
-			</li>
-			
-			
-		</ul>
-	</nav>
+		<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<div id="uw-top-menus" class="uw-is-visible uw-horizontal" aria-hidden="false">
+		<div class="uw-main-nav">
+		<nav class="uw-nav-menu uw-nav-menu-reverse" aria-label="Main Menu">
+	
+			<ul id="uw-main-nav" style="max-width:80em;">
+				
+				
+				<li class="menu-item">
+					<a style="text-decoration: none;" href="/">Home</a>
+				</li>
+				
+				
+				
+				<li class="current-menu-item">
+					<a style="text-decoration: none;" href="/about.html">About</a>
+				</li>
+				
+				
+				
+				<li class="menu-item">
+					<a style="text-decoration: none;" href="/activities.html">Activities</a>
+				</li>
+				
+				
+				
+				<li class="menu-item">
+					<a style="text-decoration: none;" href="/projects.html">Projects</a>
+				</li>
+				
+				
+				
+				<li class="menu-item">
+					<a style="text-decoration: none;" href="/news.html">News</a>
+				</li>
+				
+				
+				
+				<li class="menu-item">
+					<a style="text-decoration: none;" href="/contact.html">Contact</a>
+				</li>
+				
+				
+			</ul>
+		</nav>
+		
+		</div>
 	</div>
-</div>
+</body>
+</html>
+
 
         <div class="uw-row-full uw-pad-tb-l">
-          <div class="uw-row">
+          <div class="uw-row" style="max-width:80em;"> <!-- was uw-row before but trying to widen out -->
             <div class="uw-col uw-body">
-          	  <h1>About Us</h1>
+          	  <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>About Us</title>
+	<style>
+		h2 a {
+			text-decoration: none;
+		}
+	</style>
+</head>
+<body>
+
+
+<h1 class="uw-mini-bar">About Us</h1>
 The University of Wisconsin Open Source Program Office was established in the fall of 2023 through a grant from the <a href="http://www.sloan.org" target="_blank">Alfred P. Sloan Foundation</a>.
 
-<h2>Partners</h2>
-<p>We are working with the following partner organizations: </p>
+<h2 class="uw-mini-bar-center text-center">Partners</h2>
+<p class="text-center">We are working with the following partner organizations: </p>
 
-<ul>
-	<li>
-		<h3>The Data Science Institute</h3>
-		<p>We were founded by Kyle Cranmer, the director of the University of Wisconsin Data Science Institute. A key component of Kyle's strategic vision for DSI is to robustly support open source efforts and to provide organizational, financial, and governance models for other data science institutes and centers around the country. Our offices are located alongside the DSI offices in the McArdle Building on the UW-Madison Campus. </p>
-	</li>
+<div class="d-flex flex-col">
+	<ul style="list-style-type: none; margin: 10px;">
+		<div class="row">
+			<div class="col-sm-12 col-md-4">
+				<li>
+					<img src="images\data-science-institute-resized.png" alt="Data Science Institute logo">
+					<h2 class="uw-mini-bar"><a style="text-decoration: none;" href="https://datascience.wisc.edu/institute/">The Data Science Institute</a></h2>
+					<p>We were founded by Kyle Cranmer, the director of the University of Wisconsin Data Science Institute. A key component of Kyle's strategic vision for DSI is to robustly support open source efforts and to provide organizational, financial, and governance models for other data science institutes and centers around the country. Our offices are located alongside the DSI offices in the McArdle Building on the UW-Madison Campus. </p>
+				</li>
+			</div>
 
-	<li>
-		<h3>Madison College</h3>
-		<p>We are working with Perry Govier, an instructor at Madison College, to encourage students from Madison College’s software development program to participate in the OSPO’s activities and help advertise its Open Source Developer internships.</p>
-	</li>
+			<div class="col-sm-12 col-md-4">
+				<li>
+					<img src="images/madison-college-logo-resized.png" alt="Madison College logo">
+					<h2 class="uw-mini-bar"><a style="text-decoration: none;" href="https://madisoncollege.edu/?page=start">Madison College</a></h2>
+					<p>We are working with Perry Govier, an instructor at Madison College, to encourage students from Madison College’s software development program to participate in the OSPO’s activities and help advertise its Open Source Developer internships.</p>
+				</li>
+			</div>
 
-	<li>
-		<h3>UW Extension</h3>
-		<p>We are working with the UW extension to promote the Wisconsin Idea, one of the longest and deepest traditions surrounding the University of Wisconsin. </p>
-	</li>
+			<div class="col-sm-12 col-md-4">
+				<li>
+					<img src="images/data-science-hub-logo.png" alt="Data Science Hub logo" class="w-100">
+					<h2 class="uw-mini-bar"><a style="text-decoration: none;" href="https://datascience.wisc.edu/hub/">Data Science Hub</a></h2>
+					<p>The DSI closely collaborates with the Data Science Hub on community engagement and training initiatives. The OSPO will collaborate with the Data Science Hub on the creation and execution of a Carpentries training module specifically focused on open source.</p>
+				</li>
+			</div>
 
-	<li>
-		<h3>UW Office of Business Engagement</h3>
-		<p>We are working with and will conduct workshops with the UW’s Office of Business Engagement to identify promising companies where there may be overlap and initiate those dialogues. </p>
-	</li>
+			<div class="col-sm-12 col-md-4">
+				<li>
+					<img src="images\warf-logo-resized.png" alt="WARF logo" class="w-sm-50">
+					<h2 class="uw-mini-bar"><a style="text-decoration: none;" href="https://www.warf.org/">Wisconsin Alumni Research Foundation</a></h2>
+					<p>The OSPO will work with the Wisconsin Alumni Research Foundation to develop open source licensing guidance and connect with the entrepreneurship community. WARF provided a letter of support for OSPO.</p>
+				</li>
+			</div>
 
-	<li>
-		<h3>NumFOCUS</h3>
-		<p>NumFOCUS promotes open practices in research, data, and scientific computing. We are working with Matthew Feikert, a NumFOCUS organizer and key member of the NumFOCUS community. </p>
-	</li>
+			<div class="col-sm-12 col-md-4">
+				<li>
+					<img src="images\uw-libraries-resized.png" alt="UW Madison libraries logo">
+					<h2 class="uw-mini-bar"><a style="text-decoration: none;" href="https://www.library.wisc.edu/">UW-Madison Libraries</a></h2>
+					<p>In collaboration with UW-Madison Libraries, the OSPO will conduct a campus-wide survey assessing the state of open source on campus and develop tracking tools for community open source activity.</p>
+				</li>
+			</div>
 
-	<li>
-		<h3>Lightning AI</h3>
-		<p>Lightning AI developed and open sourced PyTorch Lightning. Their Lead AI Educator, Sebastian Raschka, is a member of our Advisory Board.</p>
+			<div class="col-sm-12 col-md-4">
+				<li>
+					<img src="images\uw-extension-logo-resized.png" alt="UW extension logo">
+					<h2 class="uw-mini-bar"><a style="text-decoration: none;" href="https://extension.wisc.edu/">UW Extension</a></h2>
+					<p>We are working with the UW extension to promote the Wisconsin Idea, one of the longest and deepest traditions surrounding the University of Wisconsin. </p>
+				</li>
+			</div>
 
-		<h3></h3>
-	</li>
-</ul>
+			<div class="col-sm-12 col-md-4">
+				<li>
+					<img src="images\uw-obe-logo-resized.png" alt="UW OBE logo">
+					<h2 class="uw-mini-bar"><a style="text-decoration: none;" href="https://obe.wisc.edu/">UW Office of Business Engagement</a></h2>
+					<p>We are working with and will conduct workshops with the UW’s Office of Business Engagement to identify promising companies where there may be overlap and initiate those dialogues. </p>
+				</li>
+			</div>
+
+			<div class="col-sm-12 col-md-4">
+				<li>
+					<img src="images\numfocus-logo-resized.png" alt="NumFOCUS logo">
+					<h2 class="uw-mini-bar"><a style="text-decoration: none;" href="https://numfocus.org/">NumFOCUS</a></h2>
+					<p>NumFOCUS promotes open practices in research, data, and scientific computing. We are working with Matthew Feikert, a NumFOCUS organizer and key member of the NumFOCUS community. </p>
+				</li>
+			</div>
+
+			<div class="col-sm-12 col-md-4">
+				<li>
+					<img src="images\lightning-ai-logo-resized.png" alt="LightningAI logo">
+					<h2 class="uw-mini-bar"><a style="text-decoration: none;" href="https://lightning.ai/">Lightning AI</a></h2>
+					<p>Lightning AI developed and open sourced PyTorch Lightning. Their Lead AI Educator, Sebastian Raschka, is a member of our Advisory Board.</p>
+				</li>
+			</div>
+		</div>
+	</ul>
+</div>
+</body>
+</html>
+
+<!--
+	Add cards for each partner!!
+	Center "partners" wordmark
+-->
             </div>
            </div>
           </div>
@@ -147,6 +248,14 @@ The University of Wisconsin Open Source Program Office was established in the fa
 		    <div class="uw-footer-menu">
 		      <h3 class="uw-footer-header">Partners</h3>
 		      <ul>
+				<style>
+					a {
+						text-decoration: none;
+					}
+					ul {
+						padding: 0;
+					}
+				</style>
 		        <li><a href="https://students.wisc.edu/">Division of Student Life</a></li>
 		        <li><a href="http://provost.wisc.edu/climate.htm">Division of Diversity, Equity &amp; Educational Achievement</a></li>
 		        <li><a href="https://chancellor.wisc.edu/">Office of the Chancellor</a></li>
@@ -170,8 +279,8 @@ The University of Wisconsin Open Source Program Office was established in the fa
 		    <div class="uw-footer-contact">
 		      <h3 class="uw-footer-header">Contact Us</h3>
 		      <ul class="uw-contact-list">
-		        <li class="uw-contact-item">Email: <a href="mailto:email@wisc.edu">email@wisc.edu</a></li>
-		        <li class="uw-contact-item">Phone: <a href="tel:608-555-5555">608-555-5555</a></li>
+		        <li class="uw-contact-item">Email: <a style="text-decoration: none" href="mailto:email@wisc.edu">email@wisc.edu</a></li>
+		        <li class="uw-contact-item">Phone: <a style="text-decoration: none" href="tel:608-555-5555">608-555-5555</a></li>
 		        <li>
 		          <ul class="uw-social-icons">
 		            <li id="uw-icon-twitter" class="uw-social-icon">
@@ -275,5 +384,6 @@ The University of Wisconsin Open Source Program Office was established in the fa
 			<script src="js/polyfills/addEventListener.js"></script>
 		<![endif]-->
 		<script src="js/_uw-style.min.js?version=3.2.0"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 	</body>
 </html>
