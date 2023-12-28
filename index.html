@@ -4,48 +4,53 @@ layout: default
 ---
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home</title>
-  </head>
-  <body>
-    <div id="carousel" class="carousel slide" data-bs-ride="carousel"> <!-- carousel of images that relate to each component (news, projects, etc.)-->
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="images\placeholders\aerial-mcardle.jpg" class="d-block w-100" alt="">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Home</title>
+    </head>
+    <body>
+        <div id="carousel" class="carousel slide" data-bs-ride="carousel"> <!-- carousel of images that relate to each component (news, projects, etc.)-->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+            <img src="images\placeholders\aerial-mcardle.jpg" class="d-block w-100" alt="">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Mcardle from above</h5>
+                    <p>Wow! It looks very nice from above.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+            <img src="images\placeholders\snowy-bascom-hall.jpg" class="d-block w-100" alt="">
+            </div>
+            <div class="carousel-item">
+            <img src="images\placeholders\van-hise-with-mcardle.jpg" class="d-block w-100" alt="">
+            </div>
         </div>
-        <div class="carousel-item">
-          <img src="images\placeholders\snowy-bascom-hall.jpg" class="d-block w-100" alt="">
+        <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+            <span style="background-color: black;" class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+            <span style="background-color: black;" class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
         </div>
-        <div class="carousel-item">
-          <img src="images\placeholders\van-hise-with-mcardle.jpg" class="d-block w-100" alt="">
+        <div id="ourMissionContainer" class="col-12">
+        <h1 id="ourMissionText" class="uw-mini-bar col-6 fs-1">Our Mission</h1>
+            <p>Universities are engines of innovation and productivity in the world. They both leverage and contribute to technology through their educational, research, and outreach activities. The way that various technological products are disseminated and shared is a fundamental issue that greatly shapes their use and impact. The move to open science, open access, and open source is a key strategy for streamlining the use of these products, fostering collaboration, and accelerating progress. However, effectively making this transition to openness is challenging and calls for institutional support.</p>
+            <p>Thanks to a grant from the Alfred P. Sloan Foundation, The University of Wisconsin–Madison Open Source Program Office (OSPO) is positioned to support and grow our vibrant open source ecosystem. The OSPO's mission is to collaborate with key stakeholders and community members to provide open source learning opportunities, promote best practices, facilitate the use of open source software in research, and make open source–fueled connections between practitioners and adopters on campus and beyond.</p>
         </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-    <div id="ourMissionContainer" class="col-12">
-      <h1 id="ourMissionText" class="uw-mini-bar col-6 fs-1">Our Mission</h1>
-	    <p>Universities are engines of innovation and productivity in the world. They both leverage and contribute to technology through their educational, research, and outreach activities. The way that various technological products are disseminated and shared is a fundamental issue that greatly shapes their use and impact. The move to open science, open access, and open source is a key strategy for streamlining the use of these products, fostering collaboration, and accelerating progress. However, effectively making this transition to openness is challenging and calls for institutional support.</p>
-	    <p>Thanks to a grant from the Alfred P. Sloan Foundation, The University of Wisconsin–Madison Open Source Program Office (OSPO) is positioned to support and grow our vibrant open source ecosystem. The OSPO's mission is to collaborate with key stakeholders and community members to provide open source learning opportunities, promote best practices, facilitate the use of open source software in research, and make open source–fueled connections between practitioners and adopters on campus and beyond.</p>
-    </div>
-    
-    <ul id="goals" class="uw-text-block uw-content-box" style="width:100%; margin:auto 0 50px; padding:10px 40px; background:#f0f0f0">
-      <h2 style="text-align:center">Goals</h2>
-      <li>Work to sustain current open source projects on campus</li>
-      <li>Provide avenues for participation and contribution in open source software</li>
-      <li>Facilitate partnerships to raise awareness of open source software</li>
-      <li>Create infrastructure for starting, maintaining, sharing, and rewarding open source in research and community contexts</li>
-      <li> Focus efforts on improving diversity, equity, and inclusion in open source</li>
-    </ul>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-  </body>
+        
+        <ul id="goals" class="uw-text-block uw-content-box" style="width:100%; margin:auto 0 50px; padding:10px 40px; background:#f0f0f0">
+        <h2 style="text-align:center">Goals</h2>
+        <li>Work to sustain current open source projects on campus</li>
+        <li>Provide avenues for participation and contribution in open source software</li>
+        <li>Facilitate partnerships to raise awareness of open source software</li>
+        <li>Create infrastructure for starting, maintaining, sharing, and rewarding open source in research and community contexts</li>
+        <li>Focus efforts on improving diversity, equity, and inclusion in open source</li>
+        </ul>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    </body>
 </html>
+
