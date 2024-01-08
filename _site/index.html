@@ -134,33 +134,49 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Home</title>
+        <style>
+            .carousel-item .image {
+                width: 100% !important;
+                height: 400px !important;
+                background-size: cover !important;
+                background-position: center !important;
+            }
+            .carousel-caption {
+                background: rgba(0,0,0,0.5);
+                border-radius: 25px;
+            }
+        </style>
     </head>
     <body>
-        <div id="carousel" class="carousel slide" data-bs-ride="carousel"> <!-- carousel of images that relate to each component (news, projects, etc.)-->
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-            <img src="images\placeholders\aerial-mcardle.jpg" class="d-block w-100" alt="">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Mcardle from above</h5>
-                    <p>Wow! It looks very nice from above.</p>
-              </div>
+        <!-- carousel of images that relate to each component (news, projects, etc.)-->
+        <div id="carousel" class="carousel slide" data-bs-ride="carousel"> 
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="image" style="background-image:url(images/placeholders/aerial-mcardle.jpg)">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Mcardle from above</h5>
+                            <p>Wow! It looks very nice from above.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="image" style="background:url(images/placeholders/snowy-bascom-hall.jpg)"></div>
+                </div>
+                <div class="carousel-item">
+                    <div class="image" style="background:url(images/placeholders/van-hise-with-mcardle.jpg)"></div>
+                </div>
             </div>
-            <div class="carousel-item">
-            <img src="images\placeholders\snowy-bascom-hall.jpg" class="d-block w-100" alt="">
-            </div>
-            <div class="carousel-item">
-            <img src="images\placeholders\van-hise-with-mcardle.jpg" class="d-block w-100" alt="">
-            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                <span style="background-color: black;" class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                <span style="background-color: black;" class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
-            <span style="background-color: black;" class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
-            <span style="background-color: black;" class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-        </div>
+
         <div id="ourMissionContainer" class="col-12">
         <h1 id="ourMissionText" class="uw-mini-bar col-6 fs-1">Our Mission</h1>
             <p>Universities are engines of innovation and productivity in the world. They both leverage and contribute to technology through their educational, research, and outreach activities. The way that various technological products are disseminated and shared is a fundamental issue that greatly shapes their use and impact. The move to open science, open access, and open source is a key strategy for streamlining the use of these products, fostering collaboration, and accelerating progress. However, effectively making this transition to openness is challenging and calls for institutional support.</p>
