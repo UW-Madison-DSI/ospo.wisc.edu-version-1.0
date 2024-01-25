@@ -11,8 +11,8 @@ layout: default
     <script type="text/javascript" src="library/jquery/jquery-3.6.0.js"></script>
 </head>
 <body>
-    <div class="d-flex flex-wrap justify-content-around p-4">
-        <div class="col-12">
+    <div class="d-flex flex-wrap justify-content-between">
+        <div class="col-md-7 col-12">
             <div class="flex-col">
                 <h1 class="uw-mini-bar">Contact</h1>
                     <p>Please feel free to reach out and contact us:</p>
@@ -20,35 +20,35 @@ layout: default
                             <div class="name form-group">
                                 <label class="required control-label"><i class="fa fa-font"></i>Name</label>
                                 <div class="controls">
-                                    <input type="text" class="required form-control" />
+                                    <input type="text" size="30" class="required form-control" />
                                 </div>
                             </div>
                             
                             <div class="username form-group" style="display:none">
                                 <label class="control-label"><i class="fa fa-keyboard"></i>Username</label>
                                 <div class="controls">
-                                    <input type="text" class="form-control" />
+                                    <input type="text" size="30" class="form-control" />
                                 </div>
                             </div>
                             
                             <div class="email form-group">
                                 <label class="control-label"><i class="fa fa-envelope"></i>Email</label>
                                 <div class="controls">
-                                    <input type="email" class="form-control" />
+                                    <input type="email" size="30" class="form-control" />
                                 </div>
                             </div>
                             
                             <div class="subject form-group">
                                 <label class="control-label"><i class="fa fa-info-circle"></i>Subject</label>
                                 <div class="controls">
-                                    <input type="text" class="form-control" />
+                                    <input type="text" size="30" class="form-control" />
                                 </div>
                             </div>
                             
                             <div class="message wide form-group">
                                 <label class="required control-label"><i class="fa fa-quote-left"></i>Message</label>
                                 <div class="controls">
-                                    <textarea class="required form-control" rows="10"></textarea>
+                                    <textarea style="resize: none;" class="required form-control" data-enable-grammarly="false" rows="10"></textarea>
                                 </div>
                             </div>
                 
@@ -183,7 +183,6 @@ layout: default
             </div>
         </div>
 
-<!--
         <div class="col-md-4 col-sm-12">
             <div class="container text-center">
                 <div class="mt-4 uw-content-box">
@@ -195,7 +194,7 @@ layout: default
                 </div>
             </div>
         </div>
--->
+
     </div>
 </body>
 </html>
