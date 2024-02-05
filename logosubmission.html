@@ -6,43 +6,7 @@
     <title>Logo Submission</title>
 </head>
 <body>
-    <form id="logoSubmissionForm">
-        <input type="text" name="name" id="name" placeholder="name">
-        <input type="file" name="projectLogo" id="projectLogo">
-        <input type="file" name="projectScreenshot" id="projectScreenshot">
-        <button type="submit">Submit</button>
-    </form>
-
-    <script>
-        document.getElementById('logoSubmissionForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-
-            let projectLogo = document.getElementById('projectLogo').files[0]; 
-            let projectScreenshot = document.getElementById('projectScreenshot').files[0]; 
-
-            let logoReader = new FileReader(); 
-            let screenshotReader = new FileReader(); 
-
-            logoReader.onload = function(e) {
-                let logo = e.target.result; 
-
-                screenshotReader.onload = function(e) {
-                    let screenshot = e.target.result;
-
-                    let data = {
-                        name: document.getElementById('name').value,
-                        logoData: logo,
-                        logoName: logo.name,
-                        screenshotData: screenshot,
-                        screenshotName: screenshot.name //
-                    };
-                    
-            googleScriptFunction(data);
-        };
-        screenshotReader.readAsDataURL(projectScreenshot);
-    };
-    logoReader.readAsDataURL(projectLogo);
-});
-    </script>
+    
+    
 </body>
 </html>
