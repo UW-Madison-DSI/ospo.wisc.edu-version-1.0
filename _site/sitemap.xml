@@ -21,4 +21,11 @@
 <url>
 <loc>http://localhost:4000/submission.html</loc>
 </url>
+<url>
+<loc>http://localhost:4000/success.html</loc>
+</url>
+<url>
+<loc>http://localhost:4000/logosubmission.html</loc>
+<lastmod>2024-02-05T10:33:05-06:00</lastmod>
+</url>
 </urlset>

@@ -16,6 +16,12 @@
 \******************************************************************************/
 
 // add custom styles here
+
+.carousel-control-prev, 
+.carousel-control-next, {
+    width: unset;
+}
+
 /*
 body {
     margin: 0;

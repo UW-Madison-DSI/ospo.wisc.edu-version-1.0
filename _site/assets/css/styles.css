@@ -14,6 +14,11 @@
 |******************************************************************************|
 |     Copyright (C) 2023, Data Science Institute, University of Wisconsin      |
 \******************************************************************************/
+.carousel-control-prev,
+.carousel-control-next {
+  width: unset;
+}
+
 /*
 body {
     margin: 0;

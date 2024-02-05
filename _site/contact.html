@@ -134,33 +134,180 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script type="text/javascript" src="library/jquery/jquery-3.6.0.js"></script>
 </head>
 <body>
-    <div class="d-flex flex-wrap">
-        <div class="col-md-7 col-sm-12">
+    <div class="d-flex flex-wrap justify-content-between">
+        <div class="col-md-7 col-12">
             <div class="flex-col">
                 <h1 class="uw-mini-bar">Contact</h1>
                     <p>Please feel free to reach out and contact us:</p>
-                <ul>
-                    <li>Email: <a href="mailto:ospo@datascience.wisc.edu">ospo@datascience.wisc.edu</a></li>
-                </ul>
+                        <div class="form">
+                            <div class="name form-group">
+                                <label class="required control-label"><i class="fa fa-font"></i>Name</label>
+                                <div class="controls">
+                                    <input type="text" size="30" class="required form-control" />
+                                </div>
+                            </div>
+                            
+                            <div class="username form-group" style="display:none">
+                                <label class="control-label"><i class="fa fa-keyboard"></i>Username</label>
+                                <div class="controls">
+                                    <input type="text" size="30" class="form-control" />
+                                </div>
+                            </div>
+                            
+                            <div class="email form-group">
+                                <label class="control-label"><i class="fa fa-envelope"></i>Email</label>
+                                <div class="controls">
+                                    <input type="email" size="30" class="form-control" />
+                                </div>
+                            </div>
+                            
+                            <div class="subject form-group">
+                                <label class="control-label"><i class="fa fa-info-circle"></i>Subject</label>
+                                <div class="controls">
+                                    <input type="text" size="30" class="form-control" />
+                                </div>
+                            </div>
+                            
+                            <div class="message wide form-group">
+                                <label class="required control-label"><i class="fa fa-quote-left"></i>Message</label>
+                                <div class="controls">
+                                    <textarea style="resize: none;" class="required form-control" data-enable-grammarly="false" rows="10"></textarea>
+                                </div>
+                            </div>
+                
+                            <div class="attachment form-group">
+                                <label class="control-label"><i class="fa fa-file"></i>Attachment</label>
+                                <div class="controls" style="display:flex">
+                                    <input type="file" id="file" class="form-control" />
+                                    <button class="remove btn btn-sm" style="margin-left:10px; display:none"><i class="fa fa-xmark"></i></button>
+                                </div>
+                            </div>
+                
+                            <hr />
+                            
+                            <div class="buttons">
+                                <button class="send btn btn-primary btn-lg">
+                                    <i class="fa fa-envelope"></i>Send
+                                </button>
+                            </div>
+                        </div>
+                
+                        <script>
+                            let server1 = 'http://localhost/contact-server/public/api';
+                            let server = 'https://wwwtest.maps.datascience.wisc.edu/apis/contact-server/public/api';
+                
+                            //
+                            // getting methods
+                            //
+                
+                            function getFormData() {
+                                return {
+                                    name: $('.name input').val(),
+                                    email: $('.email input').val(),
+                                    subject: $('.subject input').val(),
+                                    message: $('.message textarea').val(),
+                                    attachment: $('.attachment #file')[0].files[0]
+                                };
+                            }
+                
+                            //
+                            // setting functions
+                            //
+                
+                            function setFilename(filename) {
+                                const fileInput = this.$el.find('#file')[0];
+                
+                                // Help Safari out
+                                //
+                                if (fileInput.webkitEntries.length) {
+                                    fileInput.dataset.file = filename;
+                                }
+                            }
+                
+                            //
+                            // form submission functions
+                            //
+                
+                            function send(data, options) {
+                
+                                // create form data
+                                //
+                                let formData = new FormData();
+                                let keys = Object.keys(data);
+                                for (let i = 0; i < keys.length; i++) {
+                                    let key = keys[i];
+                                    let value = data[key];
+                                    formData.append(key, value);
+                                }
+                
+                                $.ajax({
+                                    type: 'POST',
+                                    url: server + '/contacts',
+                                    data: formData,
+                                    contentType: false,
+                                    processData: false,
+                                    success: options.success,
+                                    error: options.error
+                                });
+                            }
+                
+                            $(window).ready(() => {
+                
+                                //
+                                // button event handlers
+                                //
+                
+                                $('button.select').on('click', (event) => {
+                                    $('#file').trigger('click');
+                                });
+                
+                                $('button.remove').on('click', (event) => {
+                                    $('#file')[0].value = null;
+                                    $('#file').hide();
+                                    $('.remove').hide();
+                                });
+                
+                                $('.send').on('click', (event) => {
+                                    send(this.getFormData(), {
+                
+                                        // callbacks
+                                        //
+                                        success: () => {
+                                            alert("Your message has been sent.  Thank you for your feedback!");
+                                        },
+                                        error: () => {
+                                            alert("Sorry - your message could not be sent!");
+                                        }
+                                    });
+                                    event.stopPropagation();
+                                });
+                
+                                //
+                                // file event handlers
+                                //
+                
+                                $('#file').on('change', (event) => {
+                                    $('#file').show();
+                                    $('.remove').show();
+                
+                                    // set input filename (required for Safari)
+                                    //
+                                    if (event) {
+                                        if (event.target.files[0]) {
+                                            let filename = event.target.files[0].name;
+                                            setFilename(filename);
+                                        } else {
+                                            setFilename('No file chosen');
+                                        }
+                                    }
+                                });
+                            });
+                        </script>
             </div>
         </div>
-
-        <div class="col-md-5 col-sm-12">
-            <div class="container text-center">
-                <div class="mt-4 uw-content-box">
-                    <h2 class="uw-mini-bar-center text-center">Submit a Project</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui quis dicta molestias quibusdam obcaecati veniam eaque quas ad cumque debitis nemo reprehenderit, excepturi alias, earum possimus deleniti nobis, iure assumenda?</p>
-                    <a href="submission.html" class="uw-button justify-content-center">
-                        Project Submission Form
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</body>
-</html>
 
             </div>
            </div>
@@ -175,7 +322,7 @@
 		      </a>
 		    </div>
 		    <div class="uw-footer-menu">
-		      <h3 class="uw-footer-header">Partners</h3>
+		      <h3 class="uw-footer-header">Community</h3>
 		      <ul>
 				<style>
 					a {
@@ -185,41 +332,28 @@
 						padding: 0;
 					}
 				</style>
-		        <li><a href="https://students.wisc.edu/">Division of Student Life</a></li>
-		        <li><a href="http://provost.wisc.edu/climate.htm">Division of Diversity, Equity &amp; Educational Achievement</a></li>
-		        <li><a href="https://chancellor.wisc.edu/">Office of the Chancellor</a></li>
-		        <li><a href="https://universityrelations.wisc.edu/">University Relations</a></li>
-		        <li><a href="https://msc.wisc.edu/">Multicultural Student Center</a></li>
-		        <li><a href="http://www.oed.wisc.edu/">Office for Equity and Diversity</a></li>
+		        <li><a href="https://datascience.wisc.edu/institute/">Data Science Institute</a></li>
+		        <li><a href="https://datascience.wisc.edu/hub/">Data Science Hub</a></li>
+		        <li><a href="https://cdis.wisc.edu/">School of Computer, Data & Information Sciences</a></li>
 		      </ul>
 		    </div>
 		    <div class="uw-footer-menu">
 		      <h3 class="uw-footer-header">Quick Links</h3>
 		      <ul>
-		        <li><a href="http://www.wisc.edu/accessibility/">Accessibility</a></li>
-		        <li><a href="https://diversity.wisc.edu/">Diversity</a></li>
-		        <li><a href="http://www.wisc.edu/governance/">Governance</a></li>
-		        <li><a href="http://www.wisc.edu/policies/">Policies</a></li>
-		        <li><a href="http://uwpd.wisc.edu/">Safety</a></li>
-		        <li><a href="http://www.oed.wisc.edu/title-ix.htm">Title IX</a></li>
+		        <li><a href="https://datascience.wisc.edu/hub/#dropin">Coding Meetup</a></li>
+		        <li><a href="https://datascience.wisc.edu/data-science-research-bazaar/>Data Science Researcb Bazaar</a></li>
+			<li><a href="https://datascience.wisc.edu/newsletter/">Data Science @ UW Newsletter</a></li>
 		      </ul>
 		    </div>
 
 		    <div class="uw-footer-contact">
 		      <h3 class="uw-footer-header">Contact Us</h3>
 		      <ul class="uw-contact-list">
-		        <li class="uw-contact-item">Email: <a style="text-decoration: none" href="mailto:email@wisc.edu">email@wisc.edu</a></li>
-		        <li class="uw-contact-item">Phone: <a style="text-decoration: none" href="tel:608-555-5555">608-555-5555</a></li>
+			<li class="uw-contact-item">447 Lorch St. <br> Madison, WI 53706</li>
+		        <li>
+		        <li class="uw-contact-item">Email: <a style="text-decoration: none" href="mailto:ospo@datascience.wisc.edu">ospo@datascience.wisc.edu</a></li>
 		        <li>
 		          <ul class="uw-social-icons">
-		            <li id="uw-icon-twitter" class="uw-social-icon">
-		              <a aria-label="twitter" href="https://twitter.com"><svg aria-hidden="true" focusable="false"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#uw-symbol-twitter"></use></svg></a>
-		            </li>
-		            <li id="uw-icon-instagram" class="uw-social-icon">
-		              <a aria-label="instagram" href="https://www.instagram.com"><svg aria-hidden="true" focusable="false"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#uw-symbol-instagram"></use></svg></a>
-		            </li>
-		            <li id="uw-icon-facebook" class="uw-social-icon">
-		              <a aria-label="facebook" href="https://facebook.com/"><svg aria-hidden="true" focusable="false"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#uw-symbol-facebook"></use></svg></a>
 		            </li>
 		          </ul>
 		        </li>
@@ -228,7 +362,8 @@
 		  </div>
 
 		  <div class="uw-copyright">
-		    <p class="uw-contact-item">Feedback, questions or accessibility issues: <a href="mailto:changethis@domain">changethis@domain</a></p>
+		    <p class="uw-contact-item">Feedback, questions or accessibility issues: <a href="mailto:akittinger@wisc.edu">akittinger@wisc.edu</a></p>
+		    <p>Learn more about <a href="https://accessible.wisc.edu/">accessibility at UW–Madison.</a></p>
 		    <p>© 2017 Board of Regents of the <a href="http://www.wisconsin.edu">University of Wisconsin System</a></p>
 		  </div>
 		</footer>
