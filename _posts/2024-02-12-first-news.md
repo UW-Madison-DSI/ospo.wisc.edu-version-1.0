@@ -2,10 +2,8 @@
 layout: default
 title:  "First News"
 date:   2024-02-12 10:18:10 -0600
-excerpt-separator: <!--more-->
+categories: news
 ---
-
-This is an excerpt, please read by opening this....
-<!--more-->
+<h1 class="uw-mini-bar">Greeting</h1>
 
 Hello
