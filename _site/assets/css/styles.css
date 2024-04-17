@@ -21,8 +21,8 @@
 
 .carousel-item .image {
   width: 100% !important;
-  /* height: 450px !important; */
   aspect-ratio: 1.5;
+  max-height: 450px;
   background-size: cover !important;
   background-position: center !important;
 }
