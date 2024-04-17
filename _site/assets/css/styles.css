@@ -36,11 +36,23 @@ label i {
   margin-right: 5px;
 }
 
+.row div {
+  margin-bottom: 10px 0;
+}
+
 .row li img {
   display: block;
   width: 75%;
   max-width: 300px;
   margin: auto;
+}
+
+.row .logo,
+.row .screenshot {
+  display: block;
+  max-height: 200px;
+  margin: auto;
+  filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.15));
 }
 
 /*
