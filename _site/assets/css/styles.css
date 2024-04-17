@@ -36,6 +36,13 @@ label i {
   margin-right: 5px;
 }
 
+.row li img {
+  display: block;
+  width: 75%;
+  max-width: 300px;
+  margin: auto;
+}
+
 /*
 body {
     margin: 0;
