@@ -3,13 +3,30 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-		<title>Partners</title>
+		<title>Partners | Open Source Program Office</title>
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+		<!-- scripts -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-94MMWDQPFT"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-94MMWDQPFT');
+		</script>
+
+		<!-- favicons -->
+		<link rel="icon" type="image/png" sizes="16x16" href="../images/favicons/favicon-16x16.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="../images/favicons/favicon-32x32.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="../images/favicons/apple-touch-icon.png">
+		
+
 		<!-- fonts -->
     <link rel="preload" href="https://cdn.wisc.cloud/fonts/uw-rh/0.0.1/redhat-display-latin.v14.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="https://cdn.wisc.cloud/fonts/uw-rh/0.0.1/redhat-text-latin.v13.woff2" as="font" type="font/woff2" crossorigin>
 
 		<!-- styles -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="/assets/css/uw-style.css">
 		<link rel="stylesheet" href="/assets/css/styles.css">
 	</head>
@@ -22,7 +39,7 @@
 		  <div class="uw-header-container" style="max-width:80em;"> <!-- change outline to be max-width:85rem to be wider -->
 		    <div class="uw-header-crest-title">
 		      <div class="uw-header-crest">
-		        <a href="http://www.wisc.edu"><img class="uw-crest-svg" src="images/uw-crest.svg" alt="Link to University of Wisconsin-Madison home page"></a>
+		        <a href="http://www.wisc.edu"><img class="uw-crest-svg" src="/uw-crest.svg" alt="Link to University of Wisconsin-Madison home page"></a>
 		      </div>
 		      <div class="uw-title-tagline">
 		        <h1 id="site-title" class="uw-site-title">
@@ -64,7 +81,11 @@
 			-->
 		  <!-- Search Bar -->
 		</header>
-		<button class="uw-mobile-menu-button-bar uw-mobile-menu-button-bar-reversed uw-is-closed " data-menu="uw-top-menus" aria-label="Open menu" aria-expanded="false" aria-controls="uw-top-menus">Menu<svg aria-hidden="true" focusable="false"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#uw-symbol-menu"></use></svg><svg aria-hidden="true" focusable="false"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#uw-symbol-close"></use></svg></button>
+		<button class="uw-mobile-menu-button-bar uw-mobile-menu-button-bar-reversed uw-is-closed " data-menu="uw-top-menus" aria-label="Open menu" aria-expanded="false" aria-controls="uw-top-menus">
+			Menu
+			<svg aria-hidden="true" focusable="false"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#uw-symbol-menu"></use></svg><svg aria-hidden="true" focusable="false"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#uw-symbol-close"></use>
+		</svg>
+		</button>
 
 		<!DOCTYPE html>
 <html lang="en">
@@ -76,49 +97,54 @@
 <body>
 	<div id="uw-top-menus" class="uw-is-visible uw-horizontal" aria-hidden="false">
 		<div class="uw-main-nav">
-		<nav class="uw-nav-menu uw-nav-menu-reverse" aria-label="Main Menu">
-	
-			<ul id="uw-main-nav" style="max-width:80em;">
-				
-				
-				<li class="menu-item">
-					<a style="text-decoration: none;" href="/">Home</a>
-				</li>
-				
-				
-				
-				<li class="current-menu-item">
-					<a style="text-decoration: none;" href="/about.html">Partners</a>
-				</li>
-				
-				
-				
-				<li class="menu-item">
-					<a style="text-decoration: none;" href="/activities.html">Activities</a>
-				</li>
-				
-				
-				
-				<li class="menu-item">
-					<a style="text-decoration: none;" href="/projects.html">Projects</a>
-				</li>
-				
-				
-				
-				<li class="menu-item">
-					<a style="text-decoration: none;" href="/news.html">News</a>
-				</li>
-				
-				
-				
-				<li class="menu-item">
-					<a style="text-decoration: none;" href="/contact.html">Contact</a>
-				</li>
-				
-				
-			</ul>
-		</nav>
-		
+
+			<nav class="uw-nav-menu uw-nav-menu-reverse" aria-label="Main Menu">
+				<ul id="uw-main-nav" class="nav-links" style="max-width:80em;">
+						
+						
+							<li class="menu-item">
+								<a class="hi" style="text-decoration: none;" href="/">Home</a>
+							</li>
+						
+						
+						
+							<li class="menu-item">
+								<a class="hi" style="text-decoration: none;" href="/team.html">Team</a>
+							</li>
+						
+						
+						
+							<li class="current-menu-item">
+								<a class="active-item" style="text-decoration: none;" href="/about.html">Partners</a>
+							
+						
+						
+							<li class="menu-item">
+								<a class="hi" style="text-decoration: none;" href="/activities.html">Activities</a>
+							</li>
+						
+						
+						
+							<li class="menu-item">
+								<a class="hi" style="text-decoration: none;" href="/projects.html">Projects</a>
+							</li>
+						
+						
+						
+							<li class="menu-item">
+								<a class="hi" style="text-decoration: none;" href="/news.html">News</a>
+							</li>
+						
+						
+						
+							<li class="menu-item">
+								<a class="hi" style="text-decoration: none;" href="/contact.html">Contact</a>
+							</li>
+						
+						
+					</div>
+				</ul>
+			</nav>
 		</div>
 	</div>
 </body>
@@ -147,7 +173,7 @@
 			<div class="col-sm-12 col-md-4">
 				<li>
 					<img src="images\data-sci-institute-logo-resized.png" alt="Data Science Institute logo">
-					<h2 class="uw-mini-bar"><a style="text-decoration: none;" href="https://datascience.wisc.edu/institute/">The Data Science Institute</a></h2>
+					<h2 class="uw-mini-bar"><a style="text-decoration: none;" href="https://datascience.wisc.edu/institute/" target="_blank">The Data Science Institute</a></h2>
 					<p>We were founded by Kyle Cranmer, the director of the University of Wisconsin Data Science Institute. A key component of Kyle's strategic vision for DSI is to robustly support open source efforts and to provide organizational, financial, and governance models for other data science institutes and centers around the country. Our offices are located alongside the DSI offices in the McArdle Building on the UW-Madison Campus. </p>
 				</li>
 			</div>
@@ -155,7 +181,7 @@
 			<div class="col-sm-12 col-md-4">
 				<li>
 					<img src="images/madison-college-logo-resized.png" alt="Madison College logo">
-					<h2 class="uw-mini-bar"><a style="text-decoration: none;" href="https://madisoncollege.edu/?page=start">Madison College</a></h2>
+					<h2 class="uw-mini-bar"><a style="text-decoration: none;" href="https://madisoncollege.edu/?page=start" target="_blank">Madison College</a></h2>
 					<p>We are working with Perry Govier, an instructor at Madison College, to encourage students from Madison College’s software development program to participate in the OSPO’s activities and help advertise its Open Source Developer internships.</p>
 				</li>
 			</div>
@@ -163,7 +189,7 @@
 			<div class="col-sm-12 col-md-4">
 				<li>
 					<img src="images/data-science-hub-logo.png" alt="Data Science Hub logo" class="w-100">
-					<h2 class="uw-mini-bar"><a style="text-decoration: none;" href="https://datascience.wisc.edu/hub/">Data Science Hub</a></h2>
+					<h2 class="uw-mini-bar"><a style="text-decoration: none;" href="https://datascience.wisc.edu/hub/" target="_blank">Data Science Hub</a></h2>
 					<p>The DSI closely collaborates with the Data Science Hub on community engagement and training initiatives. The OSPO will collaborate with the Data Science Hub on the creation and execution of a Carpentries training module specifically focused on open source.</p>
 				</li>
 			</div>
@@ -171,7 +197,7 @@
 			<div class="col-sm-12 col-md-4">
 				<li>
 					<img src="images\warf-logo-resized.png" alt="WARF logo" class="w-sm-50">
-					<h2 class="uw-mini-bar"><a style="text-decoration: none;" href="https://www.warf.org/">Wisconsin Alumni Research Foundation</a></h2>
+					<h2 class="uw-mini-bar"><a style="text-decoration: none;" href="https://www.warf.org/" target="_blank">Wisconsin Alumni Research Foundation</a></h2>
 					<p>The OSPO will work with the Wisconsin Alumni Research Foundation to develop open source licensing guidance and connect with the entrepreneurship community. WARF provided a letter of support for OSPO.</p>
 				</li>
 			</div>
@@ -179,7 +205,7 @@
 			<div class="col-sm-12 col-md-4">
 				<li>
 					<img src="images\uw-libraries-resized.png" alt="UW Madison libraries logo">
-					<h2 class="uw-mini-bar"><a style="text-decoration: none;" href="https://www.library.wisc.edu/">UW-Madison Libraries</a></h2>
+					<h2 class="uw-mini-bar"><a style="text-decoration: none;" href="https://www.library.wisc.edu/" target="_blank">UW-Madison Libraries</a></h2>
 					<p>In collaboration with UW-Madison Libraries, the OSPO will conduct a campus-wide survey assessing the state of open source on campus and develop tracking tools for community open source activity.</p>
 				</li>
 			</div>
@@ -187,7 +213,7 @@
 			<div class="col-sm-12 col-md-4">
 				<li>
 					<img src="images\uw-extension-logo-resized.png" alt="UW extension logo">
-					<h2 class="uw-mini-bar"><a style="text-decoration: none;" href="https://extension.wisc.edu/">UW Extension</a></h2>
+					<h2 class="uw-mini-bar"><a style="text-decoration: none;" href="https://extension.wisc.edu/" target="_blank">UW Extension</a></h2>
 					<p>We are working with the UW extension to promote the Wisconsin Idea, one of the longest and deepest traditions surrounding the University of Wisconsin. </p>
 				</li>
 			</div>
@@ -195,7 +221,7 @@
 			<div class="col-sm-12 col-md-4">
 				<li>
 					<img src="images\uw-obe-logo-resized.png" alt="UW OBE logo">
-					<h2 class="uw-mini-bar"><a style="text-decoration: none;" href="https://obe.wisc.edu/">UW Office of Business Engagement</a></h2>
+					<h2 class="uw-mini-bar"><a style="text-decoration: none;" href="https://obe.wisc.edu/" target="_blank">UW Office of Business Engagement</a></h2>
 					<p>We are working with and will conduct workshops with the UW’s Office of Business Engagement to identify promising companies where there may be overlap and initiate those dialogues. </p>
 				</li>
 			</div>
@@ -203,7 +229,7 @@
 			<div class="col-sm-12 col-md-4">
 				<li>
 					<img src="images\numfocus-logo-resized.png" alt="NumFOCUS logo">
-					<h2 class="uw-mini-bar"><a style="text-decoration: none;" href="https://numfocus.org/">NumFOCUS</a></h2>
+					<h2 class="uw-mini-bar"><a style="text-decoration: none;" href="https://numfocus.org/" target="_blank">NumFOCUS</a></h2>
 					<p>NumFOCUS promotes open practices in research, data, and scientific computing. We are working with Matthew Feikert, a NumFOCUS organizer and key member of the NumFOCUS community. </p>
 				</li>
 			</div>
@@ -211,7 +237,7 @@
 			<div class="col-sm-12 col-md-4">
 				<li>
 					<img src="images\lightning-ai-logo-resized.png" alt="LightningAI logo">
-					<h2 class="uw-mini-bar"><a style="text-decoration: none;" href="https://lightning.ai/">Lightning AI</a></h2>
+					<h2 class="uw-mini-bar"><a style="text-decoration: none;" href="https://lightning.ai/" target="_blank">Lightning AI</a></h2>
 					<p>Lightning AI developed and open sourced PyTorch Lightning. Their Lead AI Educator, Sebastian Raschka, is a member of our Advisory Board.</p>
 				</li>
 			</div>
@@ -249,17 +275,17 @@
 						padding: 0;
 					}
 				</style>
-		        <li><a href="https://datascience.wisc.edu/institute/">Data Science Institute</a></li>
-		        <li><a href="https://datascience.wisc.edu/hub/">Data Science Hub</a></li>
-		        <li><a href="https://cdis.wisc.edu/">School of Computer, Data & Information Sciences</a></li>
+		        <li><a href="https://datascience.wisc.edu/institute/" target="_blank">Data Science Institute</a></li>
+		        <li><a href="https://datascience.wisc.edu/hub/" target="_blank">Data Science Hub</a></li>
+		        <li><a href="https://cdis.wisc.edu/" target="_blank">School of Computer, Data & Information Sciences</a></li>
 		      </ul>
 		    </div>
 		    <div class="uw-footer-menu">
 		      <h3 class="uw-footer-header">Quick Links</h3>
 		      <ul>
-		        <li><a href="https://datascience.wisc.edu/hub/#dropin">Coding Meetup</a></li>
-		        <li><a href="https://datascience.wisc.edu/data-science-research-bazaar/>Data Science Researcb Bazaar</a></li>
-			<li><a href="https://datascience.wisc.edu/newsletter/">Data Science @ UW Newsletter</a></li>
+		        <li><a href="https://datascience.wisc.edu/hub/#dropin" target="_blank">Coding Meetup</a></li>
+		        <li><a href="https://datascience.wisc.edu/data-science-research-bazaar/" target="_blank">Data Science Research Bazaar</a></li>
+				<li><a href="https://datascience.wisc.edu/newsletter/" target="_blank">Data Science @ UW Newsletter</a></li>
 		      </ul>
 		    </div>
 
@@ -280,8 +306,8 @@
 
 		  <div class="uw-copyright">
 		    <p class="uw-contact-item">Feedback, questions or accessibility issues: <a href="mailto:akittinger@wisc.edu">akittinger@wisc.edu</a></p>
-		    <p>Learn more about <a href="https://accessible.wisc.edu/">accessibility at UW–Madison.</a></p>
-		    <p>© 2017 Board of Regents of the <a href="http://www.wisconsin.edu">University of Wisconsin System</a></p>
+		    <p>Learn more about <a href="https://accessible.wisc.edu/" target="_blank">accessibility at UW–Madison.</a></p>
+		    <p>© 2017 Board of Regents of the <a href="http://www.wisconsin.edu" target="_blank">University of Wisconsin System</a></p>
 		  </div>
 		</footer>
 
@@ -364,7 +390,7 @@
 		<!--[if lte IE 8]>
 			<script src="js/polyfills/addEventListener.js"></script>
 		<![endif]-->
-		<script src="js/_uw-style.min.js?version=3.2.0"></script>
+		<script src="assets/js/uw-style.min.js?version=3.2.0"></script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 	</body>
 </html>
