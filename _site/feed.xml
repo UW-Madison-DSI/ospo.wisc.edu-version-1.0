@@ -1,10 +1,22 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-04-17T16:09:13-05:00</updated><id>http://localhost:4000/feed.xml</id><entry><title type="html">Second News</title><link href="http://localhost:4000/news/2024/02/13/second-news.html" rel="alternate" type="text/html" title="Second News" /><published>2024-02-13T09:27:10-06:00</published><updated>2024-02-13T09:27:10-06:00</updated><id>http://localhost:4000/news/2024/02/13/second-news</id><content type="html" xml:base="http://localhost:4000/news/2024/02/13/second-news.html"><![CDATA[<h1 class="uw-mini-bar">Something Cool</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-07-09T11:34:41-05:00</updated><id>http://localhost:4000/feed.xml</id><entry><title type="html">The OSPO Survey Results Are In!</title><link href="http://localhost:4000/news/2024/07/03/ospo-survey.html" rel="alternate" type="text/html" title="The OSPO Survey Results Are In!" /><published>2024-07-03T11:18:10-05:00</published><updated>2024-07-03T11:18:10-05:00</updated><id>http://localhost:4000/news/2024/07/03/ospo-survey</id><content type="html" xml:base="http://localhost:4000/news/2024/07/03/ospo-survey.html"><![CDATA[<h1 class="uw-mini-bar">The OSPO Survey Results Are In!</h1>
 
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae iste tempore ad. Ea dolore magni reiciendis id, quidem provident molestiae tempore tenetur voluptate. Sit iure similique, aliquam dolorum excepturi dicta.</p>
+<p>Thanks to a grant from the Alfred P. Sloan Foundation, The University of Wisconsin–Madison Open Source Program Office (OSPO) is positioned to support and grow our vibrant open source ecosystem. The OSPO’s mission is to collaborate with key stakeholders and community members to provide open source learning opportunities, promote best practices, facilitate the use of open source software in research, and make open source–fueled connections between practitioners and adopters on campus and beyond.
+This past spring of 2024, we distributed an open source survey to gauge the usage of open source tools among members of the university community, identify open source projects under development, and to collect feedback on improving the open source environment at UW-Madison.</p>
 
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae iste tempore ad. Ea dolore magni reiciendis id, quidem provident molestiae tempore tenetur voluptate. Sit iure similique, aliquam dolorum excepturi dicta.</p>
+<p>We thank those who responded to the survey for their role in capturing a snapshot of open source activities and attitudes on campus. </p>
 
+<center><a href="https://uw-madison-dsi.github.io/open_source_survey_results/sample.html" class="btn" data-original-href="https://uw-madison-dsi.github.io/open_source_survey_results/sample.html">View the results</a></center>
 
-Hello again]]></content><author><name></name></author><category term="news" /><summary type="html"><![CDATA[Something Cool]]></summary></entry><entry><title type="html">First News</title><link href="http://localhost:4000/news/2024/02/12/first-news.html" rel="alternate" type="text/html" title="First News" /><published>2024-02-12T10:18:10-06:00</published><updated>2024-02-12T10:18:10-06:00</updated><id>http://localhost:4000/news/2024/02/12/first-news</id><content type="html" xml:base="http://localhost:4000/news/2024/02/12/first-news.html"><![CDATA[<h1 class="uw-mini-bar">Greeting</h1>
+<style>
+  .btn {
+    color: #f7f7f7;
+    background-color: #0479a8;
+    border-color: #0479a8;
+}
+</style>
 
-Hello]]></content><author><name></name></author><category term="news" /><summary type="html"><![CDATA[Greeting]]></summary></entry></feed>
+<br>
+
+<a href="https://uw-madison-dsi.github.io/open_source_survey_results/">
+  <img src="/images/OSPO Survey Site Image.png" alt = screenshot of OSPO survey results website>
+</a>]]></content><author><name></name></author><category term="news" /><summary type="html"><![CDATA[The OSPO Survey Results Are In!]]></summary></entry></feed>
